@@ -16,7 +16,6 @@ const sauceSchema = new Schema(
       type: String,
     },
     
-   
     reviews: [reviewSchema]
   },
   {

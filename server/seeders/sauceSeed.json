@@ -1,0 +1,41 @@
+[
+  {
+    "sauceName": "Chipotle Poblano Pineapple",
+    "reviews": [
+      {
+        "reviewBody": "praesentium id ratione quisquam voluptatibus rerum ut et assumenda",
+        "username": "Annabelle79"
+      }
+    ]
+  },
+
+  {
+    "sauceName": "Mango Honey Habanero",
+    "reviews": [
+      {
+        "reviewBody": "facilis et ipsum",
+        "username": "Gianni_Kiehn14"
+      },
+      {
+        "reviewBody": "qui non aut nam porro cum repellendus a et ab laboriosam autem error ut ex incidunt sed consequatur autem",
+        "username": "Natasha_Beier59"
+      }
+    ]
+  },
+  {
+    "sauceName": "Peach Honey Habanero",
+    "reviews": []
+  },
+  {
+    "sauceName": "Honey Jalapeno",
+    "reviews": []
+  },
+  {
+    "sauceName": "Original Hot",
+    "reviews": []
+  },
+  {
+    "sauceName": "Serrano Lime",
+    "reviews": []
+  }
+]
