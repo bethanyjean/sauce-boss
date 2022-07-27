@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Thought } = require('../models');
+const { User} = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -15,3 +15,10 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
+
+
+  }}
+
+
+
+    module.exports = resolvers;
