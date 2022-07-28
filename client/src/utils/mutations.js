@@ -41,7 +41,7 @@ mutation addReview($sauceId: ID!, $reviewBody: String!) {
 
 export const REMOVE_REVIEW = gql `
   mutation removeReview($id: ID!) {
-    removeReview($id: ID!) {
+    removeReview(id: $id) {
         _id
         sauceName
         reviews {
