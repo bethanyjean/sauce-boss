@@ -4,7 +4,7 @@ import limeImage from "./assets/Lime.jpg"
 import originalImage from "./assets/Original.jpg"
 import mangoImage from "./assets/Mango.jpg";
 
-export const projects = [
+export const sauces = [
     {
       title: "Original Hot",
       subtitle: "Subtitle will go here",
