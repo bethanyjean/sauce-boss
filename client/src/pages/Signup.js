@@ -15,7 +15,6 @@ const Signup = () => {
   // update state based on form input changes
   const handleChange = (event) => {
     const { name, value } = event.target;
-
     setFormState({
       ...formState,
       [name]: value,
@@ -27,11 +26,13 @@ const Signup = () => {
     event.preventDefault();
 
     try {
+      console.log("await add user")
       const { data } = await addUser({
         variables: { ...formState },
       });
-
+      console.log("need token")
       Auth.login(data.addUser.token);
+      console.log('got token')
     } catch (e) {
       console.error(e);
     }
