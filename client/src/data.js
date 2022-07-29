@@ -2,6 +2,7 @@ import peachImage from "./assets/Peach.jpg"
 import jhoneyImage from "./assets/Jhoney.jpg"
 import limeImage from "./assets/Lime.jpg"
 import originalImage from "./assets/Original.jpg"
+import CppImage from "./assets/Cpp.PNG"
 import mangoImage from "./assets/Mango.jpg";
 
 export const projects = [
@@ -14,23 +15,23 @@ export const projects = [
       link: "google.com",
     },
     {
-      title: "Mango",
-      subtitle: "Node, MySQL, Javascript, Express",
+      title: "Mango Honey Habanero",
+      subtitle: "Subtitle will go here",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
       image: mangoImage,
-      link: "https://tranquil-retreat-40972.herokuapp.com/search",
+      link: "google.com",
     },
     {
-      title: "Lime",
-      subtitle: "Javascript, CSS, HTML, API",
+      title: "Serrano Lime",
+      subtitle: "Subtitle will go here",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
       image: limeImage,
-      link: "https://thomascerr.github.io/TABS-Brewery-Weather-Application/",
+      link: "google.com",
     },
     {
-      title: "Jhoney",
+      title: "Jalapeno Honey",
       subtitle: "Subtitle will go here",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
@@ -38,11 +39,19 @@ export const projects = [
       link: "google.com",
     },
     {
-      title: "Peach",
+      title: "Peach Honey Habanero",
       subtitle: "Subtitle will go here",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
       image: peachImage,
+      link: "google.com",
+    },
+    {
+      title: "Chipotle Poblano Pineapple",
+      subtitle: "Subtitle will go here",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      image: CppImage,
       link: "google.com",
     },
   ];
