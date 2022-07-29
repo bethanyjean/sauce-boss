@@ -5,7 +5,7 @@ import originalImage from "./assets/Original.jpg"
 import CppImage from "./assets/Cpp.PNG"
 import mangoImage from "./assets/Mango.jpg";
 
-export const projects = [
+export const sauces = [
     {
       title: "Original Hot",
       subtitle: "Subtitle will go here",
