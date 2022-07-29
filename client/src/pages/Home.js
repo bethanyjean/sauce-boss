@@ -1,47 +1,46 @@
-import React from 'react';
+import { CodeIcon } from "@heroicons/react/solid";
+import React from "react";
+import { projects } from "../data";
 
-import Auth from '../utils/auth';
-import { useQuery } from '@apollo/client';
-import { QUERY_THOUGHTS, QUERY_ME_BASIC } from '../utils/queries';
-
-const Home = () => {
-  const { loading, data } = useQuery(QUERY_THOUGHTS);
-  const { data: userData } = useQuery(QUERY_ME_BASIC);
-  const thoughts = data?.thoughts || [];
-
-  const loggedIn = Auth.loggedIn();
-
+export default function Home() {
   return (
-    <main>
-      <div className="flex-row justify-space-between">
-        {loggedIn && (
-          <div className="col-12 mb-3">
-            <ThoughtForm />
-          </div>
-        )}
-        <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <ThoughtList
-              thoughts={thoughts}
-              title="Some Feed for Thought(s)..."
-            />
-          )}
+    <section id="projects" className="text-gray-400 bg-gray-900 body-font">
+      <div className="container px-5 py-10 mx-auto text-center lg:px-40">
+        <div className="flex flex-col w-full mb-20">
+          <CodeIcon className="mx-auto inline-block w-10 mb-4" />
+          <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
+            Applications I Have Built
+          </h1>
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+            Placeholder
+          </p>
         </div>
-        {loggedIn && userData ? (
-          <div className="col-12 col-lg-3 mb-3">
-            <p>hello</p>
-            {/* <FriendList
-              username={userData.me.username}
-              friendCount={userData.me.friendCount}
-              friends={userData.me.friends}
-            /> */}
-          </div>
-        ) : null}
+        <div className="flex flex-wrap -m-4">
+          {projects.map((project) => (
+            <a
+              href={project.link}
+              key={project.image}
+              className="sm:w-1/2 w-100 p-4">
+              <div className="flex relative">
+                <img
+                  alt="gallery"
+                  className="absolute inset-0 w-full h-full object-cover object-center"
+                  src={project.image}
+                />
+                <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
+                  <h2 className="tracking-widest text-sm title-font font-medium text-green-400 mb-1">
+                    {project.subtitle}
+                  </h2>
+                  <h1 className="title-font text-lg font-medium text-white mb-3">
+                    {project.title}
+                  </h1>
+                  <p className="leading-relaxed">{project.description}</p>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
-    </main>
+    </section>
   );
-};
-
-export default Home;
+}
