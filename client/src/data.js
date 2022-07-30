@@ -28,7 +28,7 @@ export const sauces = [
       link: "google.com",
     },
     {
-      title: "Jalapeno Honey",
+      title: "Jalapeño Honey",
       subtitle: "Sauce Boss",
       description: "A mild spice with a sweet honey flavor",
       image: jhoneyImage,
