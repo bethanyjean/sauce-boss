@@ -10,41 +10,46 @@ const Header = () => {
   };
 
   return (
-<nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+<nav className="bg-red border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
   <div className="container flex flex-wrap justify-between items-center mx-auto">
     <a href="/" className="flex items-center">
         <img src={logo} className="mr-3 h-6 sm:h-9" alt="Logo" />
         <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white"></span>
     </a>
-    <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+    <nav className="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-xl md:font-semibold md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700
+      block py-2 pr-4 pl-3 text-gray-700 rounded">
         <li>
-          <a href="/" className="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+          <a href="/" aria-current="page" className = "hover:bg-transparent md:hover:bg-transparent md:hover:text-beige  md:dark:hover:text-beige dark:hover:bg-gray-700 dark:hover:text-beige md:dark:hover:bg-transparent">Home</a>
         </li>
-        <li>
-          <a href="/login" className="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Login</a>
-        </li>
-        <li>
-          <a href="/signup" className="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Signup</a>
-        </li>
-        <nav className ="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"> Logout
+
+        {!Auth.loggedIn() ? (
+            <>
+          <li><a href="/login" className = "hover:bg-transparent md:hover:bg-transparent md:hover:text-beige  md:dark:hover:text-beige dark:hover:bg-gray-700 dark:hover:text-beige md:dark:hover:bg-transparent">Login</a></li>
+          <li>
+          <a href="/signup" className = "hover:bg-transparent md:hover:bg-transparent md:hover:text-beige  md:dark:hover:text-beige dark:hover:bg-gray-700 dark:hover:text-beige md:dark:hover:bg-transparent">Signup</a>
+          </li>
+          </>
+          ) : (
+            <>
+                   </>
+          )} 
+
            {Auth.loggedIn() ? (
             <>
-              <a href="/" onClick={logout}>
+              <a href="/" onClick={logout} className = "hover:bg-transparent md:hover:bg-transparent md:hover:text-beige  md:dark:hover:text-beige dark:hover:bg-gray-700 dark:hover:text-beige md:dark:hover:bg-transparent">
                 Logout
               </a>
             </>
           ) : (
             <>
-
                    </>
           )}
-        </nav>
         <li>
-          <a href="/contact" className="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact Us</a>
+          <a href="/contact" className = "hover:bg-transparent md:hover:bg-transparent md:hover:text-beige  md:dark:hover:text-beige dark:hover:bg-gray-700 dark:hover:text-beige md:dark:hover:bg-transparent">Contact Us</a>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
 </nav>
 
