@@ -1,6 +1,7 @@
 import React from 'react';
 import Auth from '../../utils/auth';
-import { logo } from "../../data";
+
+import logo from '../../assets/chili-pepper.png';
 
 const Header = () => {
   const logout = event => {
@@ -10,9 +11,9 @@ const Header = () => {
 
   return (
 <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
-  <div class="container flex flex-wrap justify-between items-center mx-auto">
-    <a href="/" class="flex items-center">
-        <img src= {logo.chili1} class="mr-3 h-6 sm:h-9" alt="Logo" />
+  <div className="container flex flex-wrap justify-between items-center mx-auto">
+    <a href="/" className="flex items-center">
+        <img src={logo} className="mr-3 h-6 sm:h-9" alt="Logo" />
         <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white"></span>
     </a>
     <div className="hidden w-full md:block md:w-auto" id="navbar-default">
