@@ -4,7 +4,6 @@ import limeImage from "./assets/Lime.jpg"
 import originalImage from "./assets/Original.jpg"
 import CppImage from "./assets/Cpp.PNG"
 import mangoImage from "./assets/Mango.jpg";
-import chili1 from "./assets/chili-pepper.png";
 
 export const sauces = [
     {
@@ -51,15 +50,5 @@ export const sauces = [
     },
   ];
 
-
-  export const skills = [ "React", "Javascript", "Python", "HTML", "CSS","MySql", "MongoDB", "Node.js"
-  ];
-
-  export const logo = [
-    {
-      image: chili1,
-    },
-  ];
-  
 
   
