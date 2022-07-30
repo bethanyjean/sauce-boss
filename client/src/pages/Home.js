@@ -12,7 +12,10 @@ export default function Home() {
             Sauce Boss
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Trust the Sauce
+            Trust the Sauce 
+          </p>
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-base"> 
+            Our Award Winning Selection
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
