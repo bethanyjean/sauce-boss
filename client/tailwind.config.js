@@ -10,7 +10,17 @@ module.exports = {
     extend: {},
     fontFamily: {
       signature: ['Great Vibes'],
+    },
+    colors: {
+      'beige': '#cdc295ff',
+      'sepia': '#653400ff',
+      'red': '#b80809ff',
+      'green': '#567c01ff',
+      'brown': '#4E2618',
+      'light': '#ffd6adff',
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
