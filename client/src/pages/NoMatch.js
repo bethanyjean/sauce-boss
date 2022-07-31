@@ -2,8 +2,8 @@ import React from 'react';
 
 const NoMatch = () => {
   return (
-    <div>
-      Oops, we couldn't find that sauce.
+    <div className='bg-beige'>
+      Oops, Something went wrong.
     </div>
   );
 };
