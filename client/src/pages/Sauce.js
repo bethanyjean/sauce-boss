@@ -2,6 +2,7 @@ import React from "react";
 import image from "../assets/Original.png";
 
 
+
 export default function Home() {
   return (
     <main className='bg-beige h-screen'>
@@ -56,3 +57,4 @@ export default function Home() {
     </main>
   );
 }
+
