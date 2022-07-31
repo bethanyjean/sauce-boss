@@ -56,14 +56,14 @@ function App() {
                 path="/signup" 
                 element={<Signup />} 
               /> 
-               <Route 
+               {/* <Route 
                 path="/sauce/:id" 
                 element={<Sauce />} 
-              />
-              <Route 
+              /> */}
+              {/* <Route 
                 path="/profile" 
                 element={<Profile />} 
-              />
+              /> */}
               <Route 
                 path="*" 
                 element={<NoMatch />} 
