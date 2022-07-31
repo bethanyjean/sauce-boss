@@ -1,6 +1,9 @@
 [
   {
     "sauceName": "Chipotle Poblano Pineapple",
+    "description": "Sweet and smoky flavor with notes of pineapple",
+    "bossSuggestion": "This pairs well with chicken, rice, and eggs. It also adds great flavor to veggies. Bosses' favorite use: pulled pork.",
+    "imageName": "Pineapple",
     "reviews": [
       {
         "reviewBody": "praesentium id ratione quisquam voluptatibus rerum ut et assumenda",
@@ -11,6 +14,9 @@
 
   {
     "sauceName": "Mango Honey Habanero",
+    "description": "Sweet with a mild to hot spice level complimented by notes of mango" ,
+    "bossSuggestion": "This is awesome for anything that goes on the grill. Perfect for a summer cookout. Bosses' favorite: pizza.",
+    "imageName": "Mango",
     "reviews": [
       {
         "reviewBody": "facilis et ipsum",
@@ -24,18 +30,30 @@
   },
   {
     "sauceName": "Peach Honey Habanero",
+    "description": "Sweet with a mild to hot spice level complimented by notes of peach",
+    "bossSuggestion": "This is a favorite for nieces and nephews of all the bosses. They love to dip their chicken nuggets and fries. Bosses' favorite: kabobs.",
+    "imageName": "Peach",
     "reviews": []
   },
   {
-    "sauceName": "Honey Jalapeno",
+    "sauceName": "Honey Jalapeño",
+    "description": "A mild spice with a sweet honey flavor",
+    "bossSuggestion": "This makes a great marinade for anything. It is a bit milder than the habanero sauces, but still has a kick. Bosses' favorite: pork tenderloin.",
+    "imageName": "Jhoney",
     "reviews": []
   },
   {
     "sauceName": "Original Hot",
+    "description":"A simple blend of red peppers, vinegar, and salt. Think Tabasco",
+    "bossSuggestion": "Perfect for any and everything. Bosses' favorite: eggs",
+    "imageName": "Original" ,
     "reviews": []
   },
   {
     "sauceName": "Serrano Lime",
+    "description": "A fresh spicy flavor with hints of honey and lime",
+    "bossSuggestion": "This is best for those who like things spicy. Bosses' favorite: chicken or tuna salad.",
+    "imageName": "Lime" ,
     "reviews": []
   }
 ]
