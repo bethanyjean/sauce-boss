@@ -11,7 +11,7 @@ export const sauces = [
       subtitle: "Sauce Boss",
       description: "A simple blend of red peppers, vinegar, and salt. Think Tabasco",
       image: originalImage,
-      link: "http://www.google.com",
+      link: "google.com", 
     },
     {
       title: "Mango Honey Habanero",
