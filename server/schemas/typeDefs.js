@@ -44,7 +44,7 @@ const typeDefs = gql`
     addReview(sauceID: ID!, reviewBody: String!): Sauce
     addUser(username: String!, email: String!, password: String!): Auth
     addFavorite(sauceId: ID!): User
-    addLike(sauceId: ID!): Sauce
+    addLike(sauceID: ID!): Sauce
   }
 `;
 

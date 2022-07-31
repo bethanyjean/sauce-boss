@@ -30,35 +30,34 @@ const resolvers = {
 
   },
  Mutation: {
-    addReview: async (parent, { sauceId, reviewBody }, context) => {
+    addReview: async (parent, { sauceID, reviewBody }, context) => {
       if (context.user) {
         const updatedSauce = await Sauce.findOneAndUpdate(
-          { _id: sauceId },
+          { _id: sauceID },
           { $push: { reviews: { reviewBody, username: context.user.username } } },
-          { new: true, runValidators: true }
         );
         return updatedSauce;
       }
       throw new AuthenticationError('You need to be logged in!');
   },
 
-  addLike: async (parent, { sauceId }, context) => {
+  addLike: async (parent, { sauceID }, context) => {
     if (context.user) {
       const updatedSauce = await Sauce.findOneAndUpdate(
-        { _id: sauceId },
-        { $push: { likes: { username: context.user.username} } }
+        { _id: sauceID },
+        { $push: { likes: { _id: context.user._id} } }
       );
       return updatedSauce;
     }
     throw new AuthenticationError('You need to be logged in!'); 
   },
 
-  addFavorite: async (parent, { sauceId }, context) => {
+  addFavorite: async (parent, { sauceID }, context) => {
     if (context.user) {
             
       const updatedUser = await User.findOneAndUpdate(
         { username: context.user.username},
-        { $push: { favSauces: { _id: sauceId } } }
+        { $push: { favSauces: { _id: sauceID } } }
       );
       return updatedUser;
     }
