@@ -1,9 +1,9 @@
-import peachImage from "./assets/Peach.jpg"
-import jhoneyImage from "./assets/Jhoney.jpg"
-import limeImage from "./assets/Lime.jpg"
-import originalImage from "./assets/Original.jpg"
-import CppImage from "./assets/Cpp.PNG"
-import mangoImage from "./assets/Mango.jpg";
+import peachImage from "./assets/Peach.png"
+import jhoneyImage from "./assets/Jhoney.png"
+import limeImage from "./assets/Lime.png"
+import originalImage from "./assets/Original.png"
+import CppImage from "./assets/Pineapple.png"
+import mangoImage from "./assets/Mango.png";
 
 export const sauces = [
     {
