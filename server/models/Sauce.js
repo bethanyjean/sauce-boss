@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const reviewSchema = require('./Review');
+const userSchema = require('./User');
 const dateFormat = require('../utils/dateFormat');
 
 const sauceSchema = new Schema(
@@ -15,6 +16,20 @@ const sauceSchema = new Schema(
     description: {
       type: String,
     },
+    bossSuggestion: {
+      type: String,
+    },
+    
+    imageName: {
+      type: String,
+    },
+
+    likes: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+      }
+    ],
     
     reviews: [reviewSchema]
   },
@@ -29,6 +44,10 @@ const sauceSchema = new Schema(
 
 sauceSchema.virtual('reviewCount').get(function() {
   return this.reviews.length;
+});
+
+sauceSchema.virtual('likeCount').get(function() {
+  return this.likes.length;
 });
 
 const Sauce = model('Sauce', sauceSchema);
