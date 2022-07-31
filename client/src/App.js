@@ -56,6 +56,10 @@ function App() {
                 path="/signup" 
                 element={<Signup />} 
               /> 
+               {/* <Route 
+                path="/sauce/:id" 
+                element={<Sauce />} 
+              /> */}
               {/* <Route 
                 path="/profile" 
                 element={<Profile />} 

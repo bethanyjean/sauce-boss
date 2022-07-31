@@ -20,8 +20,12 @@ const typeDefs = gql`
     sauceName: String
     createdAt: String
     description: String
+    bossSuggestion: String
+    imageName: String
+    likeCount: Int
     reviewCount: Int
     reviews: [Review]
+    likes: [User]
   }
 
   type Auth {
@@ -31,14 +35,16 @@ const typeDefs = gql`
 
   type Query {
     me: User
-    users: [User]
-    sauce: [Sauce]
+    sauces: [Sauce]
+    sauce(_id: ID!): Sauce
   }
 
   type Mutation {
     login(email: String!, password: String!): Auth
     addReview(sauceID: ID!, reviewBody: String!): Sauce
     addUser(username: String!, email: String!, password: String!): Auth
+    addFavorite(sauceId: ID!): User
+    addLike(sauceID: ID!): Sauce
   }
 `;
 
