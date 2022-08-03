@@ -19,13 +19,14 @@ export const QUERY_ME = gql`
 
 export const QUERY_SAUCES = gql`
   {
-    sauce {
+    sauces {
       _id
       sauceName
       createdAt
       description
       bossSuggestion
       imageName
+      imagePath
       likeCount
       reviews {
         _id

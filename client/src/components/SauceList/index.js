@@ -8,22 +8,22 @@ import CppImage from "../../assets/Pineapple.png"
 import mangoImage from "../../assets/Mango.png";
 
 
-const SauceList = (sauces) => {
+const SauceList = ( {sauces} ) => {
   console.log(sauces);
     return(
 <div className="flex flex-wrap -m-4">
           {sauces.map((sauce) => (
-            <a
+            <div
               key={sauce._id}
               className="sm:w-1/3 w-100 p-4">
-
+<img alt="gallery"
+                    className="absolute inset-0 object-center"
+                     src={sauce.imagePath}/>
               <div className="flex relative">
                 <Link
                     to={`/sauce/`}>
-                        {/* to={`/sauce/${sauce.sauceName}`}> */}
-                    {/* <img alt="gallery"
-                    className="absolute inset-0 object-center"
-                     src={sauce.imageName}/> */}
+                        {/* to={`/sauce/${sauce.imageName}`}> */}
+                    
                 </Link>{' '}   
                 <div className="px-8 py-10 relative z-10  border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100 hover:bg-brown">
                     <h2 className="text-sm title-font font-medium text-green-400 mb-1">
@@ -35,7 +35,7 @@ const SauceList = (sauces) => {
                     <p className="leading-relaxed">{sauce.description}</p>
                 </div>
               </div>
-            </a>
+            </div>
           ))}
 </div>
 )};
