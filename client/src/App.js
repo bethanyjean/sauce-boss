@@ -10,12 +10,15 @@ import { setContext } from '@apollo/client/link/context';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+// import ContactForm from './components/Contact';
 
+import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import NoMatch from './pages/NoMatch';
 // import Profile from './pages/Profile';
 import Signup from './pages/Signup';
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -56,6 +59,11 @@ function App() {
                 path="/signup" 
                 element={<Signup />} 
               /> 
+              {/* <Contact /> */}
+              <Route 
+                path="/contact"
+                element={<Contact />}
+              />
                {/* <Route 
                 path="/sauce/:id" 
                 element={<Sauce />} 
