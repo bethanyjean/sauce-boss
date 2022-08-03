@@ -37,3 +37,24 @@ export const QUERY_SAUCES = gql`
     }
   }
 `;
+
+export const QUERY_SAUCE = gql`
+  {
+    sauces {
+      _id
+      sauceName
+      createdAt
+      description
+      bossSuggestion
+      imageName
+      imagePath
+      likeCount
+      reviews {
+        _id
+        reviewBody
+        createdAt
+        username
+      }
+    }
+  }
+`;

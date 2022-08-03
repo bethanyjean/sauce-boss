@@ -13,15 +13,13 @@ const SauceList = ({sauces}) => {
               <div className="flex relative">
                 <img alt="gallery"
                     className="absolute inset-0 object-center"
-                     src={sauce.imagePath}/>
-                     <Link
-                    to={`/sauce/`}>
-                        {/* to={`/sauce/${sauce.sauceName}`}> */}
-                    {/* <img alt="gallery"
-                    className="absolute inset-0 object-center"
-                     src={sauce.imageName}/> */}
-                </Link>{' '}   
-                <div className="px-8 py-10 relative z-10  border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100 hover:bg-brown">
+                     src= {`${sauce.imagePath}`}/>
+                       
+                
+                <Link
+
+                        to={`/sauce/${sauce.imageName}`}>
+                  <div className="px-8 py-10 relative z-10  border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100 hover:bg-brown">  
                     <h2 className="text-sm title-font font-medium text-green-400 mb-1">
                         Sauce Boss
                     </h2>
@@ -30,6 +28,8 @@ const SauceList = ({sauces}) => {
                     </h1>
                     <p className="leading-relaxed">{sauce.description}</p>
                 </div>
+                </Link>{' '} 
+                
               </div>
             </a>
           ))}

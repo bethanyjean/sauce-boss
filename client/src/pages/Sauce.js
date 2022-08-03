@@ -4,13 +4,13 @@ import Auth from '../utils/auth';
 import ReviewForm from '../components/ReviewForm';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import { QUERY_SAUCES } from '../utils/queries';
+import { QUERY_SAUCE } from '../utils/queries';
 
 export default function Sauce() {
 
   const { id: reviewId } = useParams();
 
-  const { loading, data } = useQuery(QUERY_SAUCES, {
+  const { loading, data } = useQuery(QUERY_SAUCE, {
     variables: { id: reviewId },
   });
 

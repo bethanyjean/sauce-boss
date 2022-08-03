@@ -24,6 +24,10 @@ const sauceSchema = new Schema(
       type: String,
     },
 
+    imagePath: {
+      type: String,
+    },
+
     likes: [
       {
         type: Schema.Types.ObjectId,
