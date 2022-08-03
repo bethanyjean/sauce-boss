@@ -16,11 +16,12 @@ const SauceList = ( {sauces} ) => {
             <div
               key={sauce._id}
               className="sm:w-1/3 w-100 p-4">
-<img alt="gallery"
+
+              <div className="flex relative">
+                <img alt="gallery"
                     className="absolute inset-0 object-center"
                      src={sauce.imagePath}/>
-              <div className="flex relative">
-                <Link
+                     <Link
                     to={`/sauce/`}>
                         {/* to={`/sauce/${sauce.imageName}`}> */}
                     
