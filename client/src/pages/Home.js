@@ -26,7 +26,7 @@ export default function Home() {
             Our Award Winning Selection
           </p>
         </div>
-        <div className="col-12 mb-3 col-lg-8">
+        <div className="h-screen col-12 mb-3 col-lg-8">
           {loading ? (
             <div>Loading...</div>
           ) : (
