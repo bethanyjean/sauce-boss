@@ -16,6 +16,7 @@ import Login from './pages/Login';
 import NoMatch from './pages/NoMatch';
 import Sauce from './pages/Sauce';
 import Signup from './pages/Signup';
+import Contact from './pages/Contact';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -63,6 +64,10 @@ function App() {
               <Route 
                 path="/sauce" 
                 element={<Sauce />} 
+              />
+               <Route 
+                path="/contact" 
+                element={<Contact />} 
               />
               <Route 
                 path="*" 
