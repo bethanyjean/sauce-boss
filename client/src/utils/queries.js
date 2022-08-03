@@ -39,8 +39,8 @@ export const QUERY_SAUCES = gql`
 `;
 
 export const QUERY_SAUCE = gql`
-  {
-    sauces {
+  query sauce($id: ID!) {
+    sauce(_id: $id) {
       _id
       sauceName
       createdAt

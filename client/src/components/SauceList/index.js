@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SauceList = ({sauces}) => {
-  console.log(sauces);
     return(
 <div className="flex flex-wrap -m-4">
           {sauces.map((sauce) => (
@@ -18,7 +17,7 @@ const SauceList = ({sauces}) => {
                 
                 <Link
 
-                        to={`/sauce/${sauce.imageName}`}>
+                        to={`/sauce/${sauce._id}`}>
                   <div className="px-8 py-10 relative z-10  border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100 hover:bg-brown">  
                     <h2 className="text-sm title-font font-medium text-green-400 mb-1">
                         Sauce Boss

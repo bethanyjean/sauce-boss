@@ -57,12 +57,8 @@ function App() {
                 path="/signup" 
                 element={<Signup />} 
               /> 
-               {/* <Route 
+               <Route 
                 path="/sauce/:id" 
-                element={<Sauce />} 
-              /> */}
-              <Route 
-                path="/sauce" 
                 element={<Sauce />} 
               />
                <Route 

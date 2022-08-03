@@ -6,28 +6,28 @@ import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_SAUCE } from '../utils/queries';
 
-export default function Sauce() {
 
-  const { id: reviewId } = useParams();
+const Sauce = (props) => {
+  const {id: sauceID} = useParams();
 
   const { loading, data } = useQuery(QUERY_SAUCE, {
-    variables: { id: reviewId },
+    variables: {id: sauceID},
   });
 
-  const review = data?.review || {};
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  const sauce = data?.sauce || {};
+console.log(sauce);
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
   return (
   <div>
     <section id="sauces" className="text-red bg-beige body-font">
 
-        <div class="flex justify-evenly">     
-          <div class="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Original Hot Sauce</h5>
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">A simple blend of red peppers, vinegar, and salt. Think Tabasco</p>
-               <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Perfect for anything and everything. Bosses' favorite: eggs</p>
+        <div className="flex justify-evenly">     
+          <div className="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{sauce.sauceName}</h5>
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{sauce.description}</p>
+               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{sauce.bossSuggestion}</p>
           </div>
         </div>
 
@@ -40,3 +40,5 @@ export default function Sauce() {
 
   );
 }
+
+export default Sauce;
