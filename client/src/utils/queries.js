@@ -16,3 +16,24 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+export const QUERY_SAUCES = gql`
+  {
+    sauces {
+      _id
+      sauceName
+      createdAt
+      description
+      bossSuggestion
+      imageName
+      imagePath
+      likeCount
+      reviews {
+        _id
+        reviewBody
+        createdAt
+        username
+      }
+    }
+  }
+`;

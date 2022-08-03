@@ -4,6 +4,7 @@
     "description": "Sweet and smoky flavor with notes of pineapple",
     "bossSuggestion": "This pairs well with chicken, rice, and eggs. It also adds great flavor to veggies. Bosses' favorite use: pulled pork.",
     "imageName": "Pineapple",
+    "imagePath": "./assets/Pineapple.png",
     "reviews": [
       {
         "reviewBody": "praesentium id ratione quisquam voluptatibus rerum ut et assumenda",

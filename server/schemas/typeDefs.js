@@ -22,6 +22,7 @@ const typeDefs = gql`
     description: String
     bossSuggestion: String
     imageName: String
+    imagePath: String
     likeCount: Int
     reviewCount: Int
     reviews: [Review]
