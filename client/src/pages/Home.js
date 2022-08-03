@@ -1,6 +1,5 @@
 import React from "react";
 import SauceList from '../components/SauceList'
-import { sauces } from "../data";
 import { useQuery } from '@apollo/client';
 import { QUERY_SAUCES, QUERY_ME } from '../utils/queries';
 
