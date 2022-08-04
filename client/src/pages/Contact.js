@@ -94,7 +94,7 @@ function ContactForm() {
               </textarea>
 
               <div className="text-white">
-                <p className="error-text text-white">{errorMessage}</p>
+                <p className="error-text text-light">{errorMessage}</p>
               </div>
               <div>
                 <button
