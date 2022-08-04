@@ -4,14 +4,30 @@ import ReviewForm from '../components/ReviewForm';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_SAUCE } from '../utils/queries';
+import { useMutation} from '@apollo/client';
+import { ADD_LIKE } from '../utils/mutations';
 
 
 const Sauce = (props) => {
   const {id: sauceID} = useParams();
+  const [addLike, {error}] = useMutation(ADD_LIKE);
 
   const { loading, data } = useQuery(QUERY_SAUCE, {
     variables: {id: sauceID},
   });
+  const handleLike = async (event) => {
+    event.preventDefault();
+    try {
+      await addLike({
+        variables: {sauceID},
+      });
+    console.log("need token")
+    Auth.login(data.addUser.token);
+    console.log('got token')
+  } catch (e) {
+    console.error(e);
+  }
+  };
   
   const sauce = data?.sauce || {};
 console.log(sauce);
@@ -30,6 +46,12 @@ const listOReviews = [];
              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{sauce.sauceName}</h5>
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{sauce.description}</p>
                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{sauce.bossSuggestion}</p>
+               <button
+                type="submit"
+                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-grey-700 bg-red hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" onClick={handleLike}
+                >
+                  I like this Sauce
+                </button>
           </div>
         </div>
         {/* <div className="flex flex-wrap -m-4">
