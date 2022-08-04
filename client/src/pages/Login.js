@@ -43,7 +43,7 @@ const Login = (props) => {
   };
 
   return (
-    <main className="bg-red">
+    <main className="h-screen bg-red">
     <div className="bg-beige min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
           <div className="bg-brown max-w-md w-full space-y-8 rounded-lg border border-gray-100 md:border-0 dark:border-gray-700 p-4">
             <div>
