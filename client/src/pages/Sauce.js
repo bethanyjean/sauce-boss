@@ -1,5 +1,4 @@
 import React from "react";
-import image from "../assets/Original.png";
 import Auth from '../utils/auth';
 import ReviewForm from '../components/ReviewForm';
 import { useParams } from 'react-router-dom';
@@ -13,12 +12,11 @@ const Sauce = (props) => {
   const { loading, data } = useQuery(QUERY_SAUCE, {
     variables: {id: sauceID},
   });
-
+  
   const sauce = data?.sauce || {};
 console.log(sauce);
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
+const listOReviews = [];
+  console.log(listOReviews);
   return (
   <div>
     <section id="sauces" className="text-red bg-beige body-font">
@@ -34,6 +32,26 @@ console.log(sauce);
                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{sauce.bossSuggestion}</p>
           </div>
         </div>
+        {/* <div className="flex flex-wrap -m-4">
+          {listOReviews.map((reviews, index) => (
+            <div key={index}
+
+              className="sm:w-1/3 w-100 p-4">
+
+              <div className="flex relative">
+                
+                  <div className="px-8 py-10 relative z-10  border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100 hover:bg-brown">  
+
+                    <h1 className="title-font text-lg font-medium text-white mb-3">
+                        {reviews.reviewBody}
+                    </h1>
+                    <p className="leading-relaxed">{reviews.username}</p>
+                </div>
+                
+              </div>
+            </div>
+          ))}
+</div> */}
 
 <div>
 {Auth.loggedIn() && <ReviewForm sauceId={sauceID} />}

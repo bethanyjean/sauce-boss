@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 
 import { useMutation } from '@apollo/client';
 import { ADD_REVIEW } from '../../utils/mutations';
+import { QUERY_SAUCE, QUERY_ME } from '../../utils/queries';
 
-const ReviewForm = ({ sauceId }) => {
+const ReviewForm = ( sauceID ) => {
   const [reviewBody, setBody] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
   const [addReview, { error }] = useMutation(ADD_REVIEW);
@@ -20,10 +21,9 @@ const ReviewForm = ({ sauceId }) => {
   // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
     try {
       await addReview({
-        variables: { reviewBody, sauceId },
+        variables: { sauceID, reviewBody },
       });
 
       // clear form value
