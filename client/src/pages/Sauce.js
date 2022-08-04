@@ -36,7 +36,7 @@ console.log(sauce);
         </div>
 
 <div>
-{Auth.loggedIn() && <ReviewForm reviewId={review._id} />}
+{Auth.loggedIn() && <ReviewForm sauceId={sauceID} />}
 </div>
 
 </section>
