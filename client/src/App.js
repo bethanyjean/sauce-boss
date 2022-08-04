@@ -16,8 +16,9 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import NoMatch from './pages/NoMatch';
-// import Profile from './pages/Profile';
+import Sauce from './pages/Sauce';
 import Signup from './pages/Signup';
+import Contact from './pages/Contact';
 
 
 const httpLink = createHttpLink({
@@ -59,19 +60,23 @@ function App() {
                 path="/signup" 
                 element={<Signup />} 
               /> 
+<<<<<<< HEAD
               {/* <Contact /> */}
               <Route 
                 path="/contact"
                 element={<Contact />}
               />
                {/* <Route 
+=======
+               <Route 
+>>>>>>> 601234a0fea4f2c7f0cb7369c24ec5dfe5c9cc58
                 path="/sauce/:id" 
                 element={<Sauce />} 
-              /> */}
-              {/* <Route 
-                path="/profile" 
-                element={<Profile />} 
-              /> */}
+              />
+               <Route 
+                path="/contact" 
+                element={<Contact />} 
+              />
               <Route 
                 path="*" 
                 element={<NoMatch />} 

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 
 import { useMutation } from '@apollo/client';
@@ -43,14 +44,12 @@ const ReviewForm = ({ sauceId }) => {
       </p>
       <form
         className="flex-row justify-center justify-space-between-md align-stretch"
-        onSubmit={handleFormSubmit}
-      >
+        onSubmit={handleFormSubmit}>
         <textarea
           placeholder="Let the Bosses know what YOU think!"
           value={reviewBody}
           className="form-input col-12 col-md-9"
-          onChange={handleChange}
-        ></textarea>
+          onChange={handleChange}></textarea>
 
         <button className="btn col-12 col-md-3" type="submit">
           Submit

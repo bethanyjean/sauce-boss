@@ -1,8 +1,15 @@
 import React from "react";
-import { sauces } from "../data";
+import SauceList from '../components/SauceList'
+import { useQuery } from '@apollo/client';
+import { QUERY_SAUCES, QUERY_ME } from '../utils/queries';
 
 
 export default function Home() {
+
+  const { loading, data } = useQuery(QUERY_SAUCES);
+  const { data: userData } = useQuery(QUERY_ME);
+  const sauces = data?.sauces || [];
+
   return (
     <main className='bg-red'>
     
@@ -19,7 +26,16 @@ export default function Home() {
             Our Award Winning Selection
           </p>
         </div>
-        <div className="flex flex-wrap -m-4">
+        <div className="h-screen col-12 mb-3 col-lg-8">
+          {loading ? (
+            <div>Loading...</div>
+          ) : (
+        <SauceList
+              sauces={sauces}
+            />
+          )}
+            </div>
+        {/* <div className="flex flex-wrap -m-4">
           {sauces.map((sauce) => (
             <a
               href={sauce.link}
@@ -43,7 +59,7 @@ export default function Home() {
               </div>
             </a>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
     </main>
