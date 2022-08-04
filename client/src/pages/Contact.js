@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import { useMutation } from '@apollo/client';
 import { validateEmail } from '../utils/helpers';
+import logo from '../assets/chili-pepper.png';
 
 function ContactForm() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
@@ -8,7 +9,7 @@ function ContactForm() {
   const [errorMessage, setErrorMessage] = useState('');
   const { name, email, message } = formState;
 
-  const handleSubmit = (e) => {
+  const handleFormSubmit = (e) => {
     e.preventDefault();
 
     if (!errorMessage) {
@@ -51,81 +52,68 @@ function ContactForm() {
     }
   };
 
-  // return (
-  //   <section>
-  //     <h1 data-testid="h1tag">Contact me</h1>
-  //     <form id="contact-form" onSubmit={handleSubmit}>
-  //       <div>
-  //         <label htmlFor="name">Name:</label>
-  //         <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
-  //       </div>
-  //       <div>
-  //         <label htmlFor="email">Email address:</label>
-  //         <input type="email" name="email" defaultValue={email} onBlur={handleChange} />
-  //       </div>
-  //       <div>
-  //         <label htmlFor="message">Message:</label>
-  //         <textarea name="message" rows="5" defaultValue={message} onBlur={handleChange} />
-  //       </div>
-  //       {errorMessage && (
-  //         <div>
-  //           <p classNameName="error-text">{errorMessage}</p>
-  //         </div>
-  //       )}
-  //       <button data-testid="button" type="submit">Submit</button>
-  //     </form>
-  //   </section>
-  // );
-
   return (
-    <main className='bg-red'>
-      <div name="contact" className="bg-beige w-full h-screen bg-gradient-to-b from-black to-gray-800 p-6">
-        <div className="text-center flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
-          <div className="pb-8">
-            <p className="text-6xl text-align center font-bold inline border-b-4 border-gray-500" data-testid="h1tag">
+    <main className='h-screen bg-red'>
+      <div name="contact" className="bg-beige min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div className="bg-brown max-w-md w-full space-y-8 rounded-lg border border-gray-100 md:border-0 dark:border-gray-700 p-4">
+          <div className="pb-6">
+          <img
+                className="mx-auto h-12 w-auto"
+                src={logo}
+                alt="Pepper"
+              />
+            <p className="mt-6 text-center text-3xl font-extrabold text-gray-900" data-testid="h1tag">
               Contact Us
             </p>
-            <p className="py-6 text-2xl">Enter your information below to get in touch with us</p>
+            <p className="mt-6 text-center text-1.5xl font-extrabold text-gray-900">Enter your information below to get in touch with us</p>
           </div>
 
           <div className=" flex justify-center items-center">
-            <form className=" flex flex-col w-full md:w-1/2" id="contact-form" onSubmit={handleSubmit}>
+            <form className=" flex flex-col w-full" id="contact-form" onSubmit={handleFormSubmit}>
               <input
                 type="text"
                 name="name"
                 placeholder="Enter your name"
                 defaultValue={name}
                 onBlur={handleChange}
-                className="m-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"/>
+                className="bg-beige form-input appearance-none rounded-none relative block w-full px-3 py-2 m-1 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md  focus:outline-none  bg-beige focus:bg-light focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"/>
               <input
                 type="text"
                 name="email"
                 placeholder="Enter your email"
                 defaultValue={email}
                 onBlur={handleChange}
-                className="m-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"/>
+                className="bg-beige form-input appearance-none rounded-none relative block w-full px-3 py-2 m-1 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md  focus:outline-none  bg-beige focus:bg-light focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"/>
               <textarea
                 name="message"
                 placeholder="Enter your message"
                 rows="10"
                 defaultValue={message}
                 onBlur={handleChange}
-                className="p-2 m-4 bg-transparent border-2 rounded-md text-white focus:outline-none">
+                className="bg-beige form-input appearance-none rounded-none relative block w-full px-3 py-2 m-1 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md  focus:outline-none  bg-beige focus:bg-light focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm">
               </textarea>
 
-              <div>
+              <div className="text-white">
                 <p className="error-text text-white">{errorMessage}</p>
               </div>
-
-              <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white m-4 py-2 px-4 border border-blue-500 hover:border-transparent rounded" data-testid="h1tag" type="submit">
-                Let's talk
-              </button>
+              <div>
+                <button
+                type="submit"
+                className="group relative w-full flex justify-center py-2 px-4 m-1 border border-transparent text-sm font-medium rounded-md text-grey-700 bg-red hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" data-testid="h1tag" onClick={handleFormSubmit}
+                >
+                 <span className="absolute left-0 inset-y-0 flex items-center pl-3">
+                    {/* <LockClosedIcon className="h-5 w-5 text-gray-700 group-hover:text-indigo-400" aria-hidden="true" /> */}
+                  </span>
+                  Let's Talk
+                </button>
+              </div>
             </form>
           </div>
         </div>
       </div>
     </main>
   );
+
 }
 
 export default ContactForm;
