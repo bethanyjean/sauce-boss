@@ -25,8 +25,8 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_REVIEW = gql`
-mutation addReview($sauceId: ID!, $reviewBody: String!) {
-    addReview(sauceId: $sauceId, reviewBody: $reviewBody) {
+mutation addReview($sauceID: ID!, $reviewBody: String!) {
+    addReview(sauceID: $sauceID, reviewBody: $reviewBody) {
       _id
       reviewCount
       reviews {

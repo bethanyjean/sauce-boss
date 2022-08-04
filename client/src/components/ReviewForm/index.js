@@ -3,9 +3,8 @@ import React, { useState } from 'react';
 
 import { useMutation } from '@apollo/client';
 import { ADD_REVIEW } from '../../utils/mutations';
-import { QUERY_SAUCE, QUERY_ME } from '../../utils/queries';
 
-const ReviewForm = ( sauceID ) => {
+const ReviewForm = ( {sauceID} ) => {
   const [reviewBody, setBody] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
   const [addReview, { error }] = useMutation(ADD_REVIEW);
@@ -20,17 +19,20 @@ const ReviewForm = ( sauceID ) => {
 
   // submit form
   const handleFormSubmit = async (event) => {
+    console.log(reviewBody);
+    console.log(sauceID);
     event.preventDefault();
     try {
       await addReview({
-        variables: { sauceID, reviewBody },
+        
+        variables: { sauceID,reviewBody },
       });
 
       // clear form value
       setBody('');
       setCharacterCount(0);
     } catch (e) {
-      console.error(e);
+      console.error(e.message);
     }
   };
 
@@ -50,7 +52,7 @@ const ReviewForm = ( sauceID ) => {
           value={reviewBody}
           className="form-input col-12 col-md-9"
           onChange={handleChange}></textarea>
-
+<div></div>
         <button className="btn col-12 col-md-3" type="submit">
           Submit
         </button>

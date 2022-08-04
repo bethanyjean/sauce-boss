@@ -31,6 +31,8 @@ const resolvers = {
   },
  Mutation: {
     addReview: async (parent, { sauceID, reviewBody }, context) => {
+      console.log("from reslover.js sauceID, reviewBody", sauceID, reviewBody) 
+
       if (context.user) {
         const updatedSauce = await Sauce.findOneAndUpdate(
           { _id: sauceID },

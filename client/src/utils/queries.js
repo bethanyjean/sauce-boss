@@ -6,7 +6,7 @@ export const QUERY_ME = gql`
       _id
       username
       email
-      sauces {
+      favSauces {
         _id
         sauceName
         description

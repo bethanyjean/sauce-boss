@@ -19,7 +19,7 @@ if (listOReviews === undefined){
   return (
   <div>
     <section id="sauces" className="text-red bg-beige body-font">
-        <div className="flex justify-evenly">
+        <div className="flex justify-evenly p-4">
           <div className="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
             <div><img alt="gallery"
                     className="object-center"
@@ -29,7 +29,7 @@ if (listOReviews === undefined){
                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{sauce.bossSuggestion}</p>
           </div>
         </div>
-        <div className="flex flex-wrap -m-4">
+        <div className="flex justify-between pl-10 flex-wrap m-4">
           {listOReviews.map((review) => (
             <div key={review._id}
               className="sm:w-1/3 w-100 p-4">
@@ -44,8 +44,8 @@ if (listOReviews === undefined){
             </div>
           ))}
 </div>
-<div>
-{Auth.loggedIn() && <ReviewForm sauceId={sauceID} />}
+<div className =  "flex flex-wrap m-6 p-8 justify-center">
+{Auth.loggedIn() && <ReviewForm sauceID={sauceID} />}
 </div>
 </section>
 </div>
