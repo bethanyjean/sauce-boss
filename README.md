@@ -1,7 +1,12 @@
-# sauce-boss
+# Sauce Boss
+
+# Deployed Site
+
+https://sauceboss.herokuapp.com/
 
 
 # Purpose
+
 Sauce Boss is an application for hot sauce lovers that is based on six sauces in the “Sauce Boss” brand. It offers the functionality for users to create an account, login, and review our sauces.   
 
 This site’s structure/functionality could be modified to meet the needs of many small businesses or individual products.  
@@ -51,7 +56,7 @@ Have a high-quality README (with unique name, description, technologies used, sc
 # Mock-Up
 
 </br>
-![sauce-boss - Copy](https://user-images.githubusercontent.com/99782685/182986620-8a1129e2-c54b-466e-aadb-ca9b8b0a456d.png)
+<img src="https://user-images.githubusercontent.com/99782685/182986620-8a1129e2-c54b-466e-aadb-ca9b8b0a456d.png">
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -76,7 +81,7 @@ Thomas Cerreto
 
 John Hamborsky
 
-Bethany Jean
+Bethany Griffin
 
 Harrison Daniel
 
